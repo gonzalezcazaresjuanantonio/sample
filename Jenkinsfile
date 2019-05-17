@@ -1,12 +1,14 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'Node11.14.0'
+    }
+
+  }
   stages {
     stage('Install') {
       steps {
-        nodejs('Node11.14.0') {
-          sh 'npm install'
-        }
-
+        sh 'npm install'
       }
     }
     stage('Build') {
