@@ -1,2 +1,2 @@
 set -x
-kill $(cat .pitfile)
+kill $(cat .pidfile)
