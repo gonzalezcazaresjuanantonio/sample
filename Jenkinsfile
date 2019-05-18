@@ -28,7 +28,7 @@ pipeline {
       steps {
         sh 'echo "Deploy to development"'
         sh './script/deliver.sh'
-        input message 'Finalizar?'
+        input message: 'Finalizar?'
         sh './script/kill.sh'
       }
     }
